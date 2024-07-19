@@ -252,11 +252,12 @@ int main(int argc, char **argv)
 
     do {
 	    nbytes = read(s, msg, BUFSIZE);
-	    if (nbytes > 0 && nbytes < BUFSIZE)
+	    if (nbytes > 0 && nbytes < BUFSIZE) {
 		    for (i=0; i < nbytes; i++)
 			    printf("%02X ", msg[i]);
-	    printf("\n");
-		fflush(stdout);
+	    	printf("\n");
+			fflush(stdout);
+		}
     } while (loop);
 
     close(s);
