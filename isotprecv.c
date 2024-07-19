@@ -256,6 +256,7 @@ int main(int argc, char **argv)
 		    for (i=0; i < nbytes; i++)
 			    printf("%02X ", msg[i]);
 	    printf("\n");
+		fflush(stdout);
     } while (loop);
 
     close(s);
